@@ -1,0 +1,44 @@
+Question 4 - Reverse a string
+
+In this lab, your task is to implement a reverseString method that takes a string as input and returns its reverse without using any built-in string reversal functions. This method should be static and part of a class named Main.
+
+Your method should satisfy the following conditions:
+
+It must be public and static.
+It must be named reverseString.
+It must return a String.
+It must take a single String parameter.
+Examples:
+If your method is called with reverseString("codedamn"), it should return nmadedoc.
+If your method is called with reverseString("123"), it should return 321.
+Ensure that your method handles these cases correctly and does not rely on any built-in string reversal methods provided by Java or its libraries. Good luck!
+
+-------------------------------------------------Solution ------------------------------------------------
+
+class Main {
+    public static void main(String[] args) {
+        // Example usage of the reverseString method
+       
+
+        String example1 = reverseString("codedamn");
+        String example2 = reverseString("123");
+
+        // Output the results
+        System.out.println(example1); // Expected output: nmadedoc
+        System.out.println(example2); // Expected output: 321
+    }
+
+
+    // Create "reverseString" method to reverse a string
+    public static String reverseString(String str){
+        String s="";
+
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            char ch=str.charAt(i);
+            s=s+ch;
+        }
+        return s;
+    }
+
+}
